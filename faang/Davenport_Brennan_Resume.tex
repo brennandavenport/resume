@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Brennan Davenport
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\definecolor{lightblue}{rgb}{0, 0.6059, 1}
+\usepackage[normalem]{ulem}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheadingEducation}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small\textbf{#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge \scshape Brennan Davenport} \\ \vspace{1pt}
+    \small (678) 521-3406 $|$ \href{mailto:brennandavenport3@gmail.com}{\uline{brennandavenport3@gmail.com}} $|$
+    \href{https://github.com/brennandavenport}{\uline{github.com/brennandavenport}} $|$
+    \href{https://www.linkedin.com/in/brennan-davenport/}{\uline{linkedin.com/in/brennan-davenport}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingEducation
+      {University of Georgia}{Athens, GA}
+      {B.S. in Computer Science \& B.S. in Mathematics, GPA 3.73/4.00}{Expected Graduation: May 2027}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Coursework}{: Algorithms, Data Structures, Systems Programming, Software Engineering, Networks, Architecture} \\
+      \textbf{Languages/Tools}{: Python, Java, C++, JavaScript, C\#, React, Django, Spring Boot, .NET, Azure, Git, Linux} \\
+    }}
+  \end{itemize}
+\vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer Intern}{May 2025 -- August 2025}
+      {Western Alliance Bank}{Dallas, TX}
+      \resumeItemListStart
+        \resumeItem{Migrated FOREX trading services from Finzly to ION, yielding low-latency (less than 100ms), 99.9\% uptime, and full regulatory compliance to support high-volume financial transactions and real-time data}
+        \resumeItem{Identified bottlenecks in reading JSON files in Azure and built a scalable SQL Server database with a C\# API pipeline processing 10,000+ records/month, eliminating delays and accelerating team throughput}
+        \resumeItem{Engineered a CLEAN-architecture server template with 6 JWT-authenticated endpoints, adopted as the foundation for 14+ new services, standardizing secure, production-ready backend development across the team}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Software Engineer Intern}{June 2024 -- September 2024}
+      {Category Creations}{Athens, GA}
+      \resumeItemListStart
+        \resumeItem{Developed a scalable routing solution using Google Apps Script to optimize routes for over 300 stores}
+        \resumeItem{Increased routing accuracy by 20\% through integration of K-nearest neighbor, two-opt, and three-opt algorithms}
+        \resumeItem{Created a fully automated system that routes new store addresses instantly, handling all geocoding, distance math, and optimization; eliminating manual input and saving 50+ hours per month}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{DeepBermuda: Neural Network LSM for Exotic Option Pricing} $|$ \emph{Python, PyTorch}}{March 2025}
+        \resumeItemListStart
+          \resumeItem{Developed DeepBermuda, a neural network-augmented Longstaff-Schwartz Monte Carlo (LSM) algorithm for pricing Bermudan, American, and European options, targeting complex multi-asset OTC derivatives}
+          \resumeItem{Replaced traditional poly regression with a FNN to better approximate continuation values in high-dim options}
+          \resumeItem{Benchmarked pricing accuracy against standard LSM using mean squared error and performance across varying volatility, moneyness, and dimensions (1D-10D)}
+        \resumeItemListEnd
+    
+      \resumeProjectHeading
+          {\textbf{Texas Hold'em Poker Engine} $|$ \emph{Python, Game Theory, Machine Learning}}{January 2025}
+          \resumeItemListStart
+            \resumeItem{Built a full-featured Texas Hold'em poker engine supporting multi-player gameplay and real-time gameplay logic}
+            \resumeItem{Designed the system architecture to support future integration of reinforcement learning agents (DQN, PPO), enabling adversarial self-play and strategy optimization}
+          \resumeItemListEnd
+
+      % FAANG Project
+      \resumeProjectHeading
+          {\textbf{CalTrack} $|$ \emph{React-Native, JavaScript Django, Python, PyTorch, PostgreSQL}}{March 2024}
+          \resumeItemListStart
+            \resumeItem{Led a team of students in developing a mobile app that utilizes AI powered image detection to identify food items}
+            \resumeItem{Used PyTorch to build and train a ML model with a dataset from Hugging Face, featuring 100k+ food images}
+            \resumeItem{Created a RESTful backend with Django and PostgreSQL to manage user auth, predictions, and food tracking data}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+\vspace{-15pt}
+%---------------Extra----------------------------
+\section{Leadership \& Organizations}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Traders@UGA} \href{https://tradersatuga.com}{[ \textcolor{lightblue}{\uline{Link}} ]} $|$ \emph{Founder \& President}}{December 2024 -- Present}
+            \resumeItemListStart
+              \resumeItem{Founded Traders@UGA, a quant trading club focused on projects, trading comps, and industry events with DRW}
+              \resumeItem{Managed recruitment of 200+ applicants with a selective 5.5\% acceptance rate and accepting 11 members}
+            \resumeItemListEnd
+        
+      \resumeProjectHeading
+          {\textbf{ICPC@UGA} $|$ \emph{Member}}{August 2024 -- Present}  
+          \resumeItemListStart  
+            \resumeItem{Solve 5+ timed algorithmic problems weekly (DP, Greedy, Graphs, etc.) and placed in regional contests}
+          \resumeItemListEnd  
+      
+      \resumeProjectHeading
+        {\textbf{Honors \& Activities} $|$ {Corsair Society, Eagle Scout, Resident Assistant, Dean's/President's List (4x), ChessDawgs}}
+      
+      \resumeProjectHeading
+        {\textbf{Trading Competitions} $|$ {Georgia Tech, UMich (5th Jane Street, 5th Citadel, 9th Optiver), MathDash (Finalist)}}
+      
+        
+    \resumeSubHeadingListEnd
+
+
+\end{document}
